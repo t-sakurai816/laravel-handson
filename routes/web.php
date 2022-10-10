@@ -30,5 +30,5 @@ Route::post('/tweet/create', \App\Http\Controllers\Tweet\CreateController::class
 Route::get('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)
 ->name('tweet.update.index');
 
-Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\CreateController::class)
+Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)
 ->name('tweet.update.put');

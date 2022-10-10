@@ -10,6 +10,10 @@ class UpdateRequest extends FormRequest
     {
         return $this->input('tweet');
     }
+    public function id(): int
+    {
+        return (int)$this->route('tweetId');
+    }
     /**
      * Determine if the user is authorized to make this request.
      *
