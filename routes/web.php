@@ -31,4 +31,4 @@ Route::get('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexCo
 ->name('tweet.update.index');
 
 Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\CreateController::class)
-->name('tweet.create');
+->name('tweet.update.put');
