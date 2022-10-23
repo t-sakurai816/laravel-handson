@@ -18,7 +18,8 @@ class DeleteController extends Controller
      */
     public function __invoke(Request $request, TweetService $tweetService)
     {
-        if(!$tweetService->checkOwnTweet($request->user()->id, $request->id())){
+        $tweetId = (int) $request->route('tweetId');
+        if(!$tweetService->checkOwnTweet($request->user()->id, $tweetId)){
             throw new AccessDeniedHttpException();
         }
         $tweetId = (int)$request->route('tweetId');
